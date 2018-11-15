@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_20181114"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Test" MinHeight="450" MinWidth="800" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip">
     <Grid>
         
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="140"/>
+        </Grid.RowDefinitions>
+             
+        <Label Content="人民币余额" HorizontalAlignment="Left" Margin="500,46,200,65" VerticalAlignment="Top" Grid.Row="0"/>
+        <Label Content="美元余额" HorizontalAlignment="Left" Margin="500,86,200,30" VerticalAlignment="Top" Grid.Row="0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="580,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Row="0" Width="120"/>           
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="580,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Row="0" Width="120"/>
+
+         <RadioButton Content="存款" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,46,0,0"/>
+         <RadioButton Content="取款" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,46,0,0"/>
+         <RadioButton Content="人民币" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,86,0,0"/>
+         <RadioButton Content="美元" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,86,0,0"/>
+        
+         <Label Content="存取金额：" HorizontalAlignment="Left" Margin="100,15,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+         <CheckBox Content="打印凭条" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,60,0,0" Grid.Row="1"/>
+         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="170,15,0,0" Grid.Row="1"/>
+        
+         <Label Content="账户类型：" HorizontalAlignment="Left" Margin="100,20,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+         <ComboBox HorizontalAlignment="Left" Margin="168,20,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" SelectedItem="0">
+             <ComboBoxItem>借记卡
+             </ComboBoxItem>
+             <ComboBoxItem>贷记卡
+             </ComboBoxItem>
+         </ComboBox>
+        
+         <Button Content="确认" HorizontalAlignment="Left" Margin="100,30,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75"/>
+
+
+
+
+
     </Grid>
 </Window>
