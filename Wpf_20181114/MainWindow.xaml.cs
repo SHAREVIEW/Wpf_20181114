@@ -31,6 +31,7 @@ namespace Wpf_20181114
 
         private void AcceptButton_Click(object sender, RoutedEventArgs e)
         {
+           
 
             if (CheckBox.IsChecked == true )
             {
@@ -63,47 +64,47 @@ namespace Wpf_20181114
                 }
             }
         }
-
-        private void MoneyLogic()
-        {
-            
-            string strMsg = accountTypeBox.SelectedValue.ToString();
-            ComboBoxItem item = (ComboBoxItem)accountTypeBox.SelectedItem;
-            if (item.Content.ToString() == "借记卡")
-            {
-                //存款
-                if (rdb_ck.IsChecked == true)
+        
+                private void MoneyLogic()
                 {
-                    if (item.Content.ToString() == "人民币")
+
+                    string strMsg = accountTypeBox.SelectedValue.ToString();
+                    ComboBoxItem item = (ComboBoxItem)accountTypeBox.SelectedItem;
+                    if (item.Content.ToString() == "借记卡")
                     {
-                        cnyTotalBalance.Text += Convert.ToDouble(InputAmount.Text);
-                    }
-                    else
-                    {
-                        usdTotalBalance.Text += Convert.ToDouble(InputAmount.Text);
-                    }
-                    if (rdb_qk.IsChecked == true)
-                    {
-                        if (item.Content.ToString() == "人民币")
+                        //存款
+                        if (rdb_ck.IsChecked == true)
                         {
-                            cnyTotalBalance.Text -= Convert.ToDouble(InputAmount.Text);
+                            if (item.Content.ToString() == "人民币")
+                            {
+                                cnyTotalBalance.Text = cnyTotalBalance.Text + Convert.ToDouble(InputAmount.Text);
+                            }
+                            else
+                            {
+                                usdTotalBalance.Text = usdTotalBalance.Text + Convert.ToDouble(InputAmount.Text);
+                            }
+                            if (rdb_qk.IsChecked == true)
+                            {
+                                if (item.Content.ToString() == "人民币")
+                                {
+                                   // cnyTotalBalance.Text -= Convert.ToDouble(InputAmount.Text);
+                                }
+                            }
                         }
                     }
+
+
+
                 }
-            }
+        /*
+                private void rdb_ck_Checked(object sender, RoutedEventArgs e)
+                {
+                    MoneyLogic();
+                }
 
-
-
-        }
-
-        private void rdb_ck_Checked(object sender, RoutedEventArgs e)
-        {
-            MoneyLogic();
-        }
-
-        private void rdb_qk_Checked(object sender, RoutedEventArgs e)
-        {
-            MoneyLogic();
-        }
+                private void rdb_qk_Checked(object sender, RoutedEventArgs e)
+                {
+                    MoneyLogic();
+                }*/
     }
 }

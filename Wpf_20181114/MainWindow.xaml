@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Test" MinHeight="450" MinWidth="800" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip">
     <Grid>
-        <RadioButton  x:Name="rdb_ck" Content="存款" HorizontalAlignment="Left" Margin="147,121,0,0" VerticalAlignment="Top" IsChecked="True" GroupName="a" Checked="rdb_ck_Checked" />
-        <RadioButton  x:Name="rdb_qk" Content="取款" HorizontalAlignment="Left" Margin="221,121,0,0" VerticalAlignment="Top" GroupName="a" Checked="rdb_qk_Checked"/>
+        <RadioButton  x:Name="rdb_ck" Content="存款" HorizontalAlignment="Left" Margin="147,121,0,0" VerticalAlignment="Top" IsChecked="True" GroupName="a"  />
+        <RadioButton  x:Name="rdb_qk" Content="取款" HorizontalAlignment="Left" Margin="221,121,0,0" VerticalAlignment="Top" GroupName="a" />
         <RadioButton Content="人民币" HorizontalAlignment="Left" Margin="147,152,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="美元" HorizontalAlignment="Left" Margin="221,152,0,0" VerticalAlignment="Top"/>
         <Label Content="操作金额" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="97,221,0,0"/>
